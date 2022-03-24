@@ -20,17 +20,21 @@ function updateGifs(res) {
 
 //Get search term from the form;
 $("form").on("submit", async function (evt) {
+  //prevent reload
   evt.preventDefault();
 
+  //get search term from form
   let term = $term.val();
   $term.val("");
 
+  //get response from giphy api of term search
   const response = await axios.get("http://api.giphy.com/v1/gifs/search", {
     params: {
       q: term,
       api_key: "MhAodEJIJxQMxW9XqxKjyXfNYdLoOIym",
     },
   });
+  //call updateGifs to create new gif
   updateGifs(response.data);
 });
 
