@@ -1,0 +1,14 @@
+.gif {
+  height: 200px;
+  padding: 10px;
+}
+
+body {
+  background-color: darkslategray;
+  text-align: center;
+}
+
+.form-area {
+  display: inline-block;
+  padding: 10px;
+}
